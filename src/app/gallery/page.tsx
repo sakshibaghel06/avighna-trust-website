@@ -3,8 +3,8 @@ import {
   ContentPage,
   NotePanel,
   PageSection,
-  PlaceholderGallery,
 } from "../_components/content-page";
+import { GalleryExplorer } from "../_components/gallery-explorer";
 
 export const metadata: Metadata = {
   title: "Gallery | Vedavani Pathashala",
@@ -26,13 +26,7 @@ export default function GalleryPage() {
           the project assets. The panels below are intentionally abstract
           placeholders, not images of the institution or its community.
         </p>
-        <PlaceholderGallery
-          items={[
-            { title: "Vedic learning", symbol: "✳" },
-            { title: "Words in practice", symbol: "॥" },
-            { title: "Gathered in community", symbol: "◉" },
-          ]}
-        />
+        <GalleryExplorer />
         <NotePanel title="Photography and permissions">
           <p>
             Approved photographs can replace these placeholders when supplied.

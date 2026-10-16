@@ -83,6 +83,50 @@ export default function AboutPage() {
           and the way one lives.
         </p>
       </PageSection>
+
+      <PageSection eyebrow="Core values" title={<>Principles for learning and living.</>}>
+        <InfoGrid
+          items={[
+            { title: "Dharma", description: "A commitment to right conduct, responsibility and care." },
+            { title: "Satya", description: "Truthfulness in learning, speech and action." },
+            { title: "Seva", description: "Service offered with humility and concern for others." },
+            { title: "Vinaya", description: "Humility and respect in the pursuit and sharing of knowledge." },
+            { title: "Shraddha", description: "Sincere attention, trust and dedication in learning." },
+            { title: "Samskriti", description: "Respect for cultural inheritance and its thoughtful continuity." },
+            { title: "Jnana", description: "Knowledge pursued with discernment and a willingness to reflect." },
+            { title: "Karuna", description: "Compassion expressed through understanding and action." },
+            { title: "Samatva", description: "Equanimity and respect for the dignity of all." },
+          ]}
+        />
+      </PageSection>
+
+      <PageSection eyebrow="The Trust" title={<>A purpose held in trust.</>}>
+        <TextColumns>
+          <TextBlock title="Why Vedavani Pathashala?">
+            <p>
+              The name evokes learning carried through the spoken word. The
+              Pathashala is presented here as a learning vision for Vedic
+              knowledge, Sanskrit and holistic education; its formal
+              institutional status and relationship to Avighna Trust need
+              confirmation.
+            </p>
+          </TextBlock>
+          <TextBlock title="Our commitment">
+            <p>
+              We aim to represent traditions with respect, share only verified
+              programme and organisational information, and keep learning
+              connected to values, service and the wider community.
+            </p>
+          </TextBlock>
+        </TextColumns>
+        <NotePanel title="Institutional details require confirmation">
+          <p>
+            Registration, governance, official naming and the relationship
+            between Avighna Trust and Vedavani Pathashala must be reviewed by
+            the Trust before these statements are treated as formal facts.
+          </p>
+        </NotePanel>
+      </PageSection>
     </ContentPage>
   );
 }

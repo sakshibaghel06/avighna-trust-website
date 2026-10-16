@@ -14,30 +14,66 @@ const programmes = [
   },
   {
     number: "02",
-    title: "Sanskrit Learning",
+    title: "Vedic & Sanskrit Learning",
     description:
-      "Build a living connection with Sanskrit through language, literature, chanting and the words that carry our knowledge traditions.",
-    tag: "Bhāṣā · Sāhitya",
-    href: "/programmes",
+      "Study Vedic knowledge and build a living connection with Sanskrit, literature, chanting and oral tradition.",
+    tag: "Veda · Bhāṣā · Sāhitya",
+    href: "/samskritam",
     symbol: "अ",
   },
   {
     number: "03",
     title: "Panchamukhi Shikshana",
     description:
-      "A multidimensional approach to learning that brings together knowledge, values, discipline, creativity and practical life.",
+      "Five dimensions of learning: Veda, Yoga, Vijnana, Krishi and Kala Kaushalya.",
     tag: "Learning in many dimensions",
-    href: "/programmes",
+    href: "/panchamukhi-shikshana",
     symbol: "✳",
   },
   {
     number: "04",
-    title: "Research",
+    title: "Modern Education",
+    description:
+      "A learning vision that brings traditional study into dialogue with contemporary academic opportunities, including NIOS.",
+    tag: "Traditional · Contemporary",
+    href: "/programmes",
+    symbol: "◈",
+  },
+  {
+    number: "05",
+    title: "Research & Knowledge",
     description:
       "Study of Vedic and Bharatiya knowledge systems, shared through thoughtful educational resources.",
     tag: "Study · Publications",
     href: "/research",
     symbol: "◌",
+  },
+  {
+    number: "06",
+    title: "Temple & Spiritual Life",
+    description:
+      "Temple services and spiritual activities are among the areas identified in the institutional vision.",
+    tag: "Practice · Service",
+    href: "/spiritual-services",
+    symbol: "दीप",
+  },
+  {
+    number: "07",
+    title: "Community Outreach",
+    description:
+      "Learning and service connect through cultural activity, education and community welfare.",
+    tag: "Outreach · Seva",
+    href: "/community",
+    symbol: "सेवा",
+  },
+  {
+    number: "08",
+    title: "Sanskrit & DevaVāṇī",
+    description:
+      "Language learning can keep knowledge, literature and cultural memory in living conversation.",
+    tag: "Language · Heritage",
+    href: "/samskritam",
+    symbol: "सं",
   },
 ];
 
@@ -107,15 +143,18 @@ export default function Home() {
             </p>
             <h1>Ancient wisdom.<br /><em>Living</em> knowledge.</h1>
             <p className={styles.heroDescription}>
-              Preserving the eternal wisdom of the Vedas. Nurturing values.
-              Inspiring future generations.
+              Preserving the Eternal Wisdom of the Vedas • Nurturing Values •
+              Inspiring Future Generations
             </p>
             <div className={styles.heroActions}>
               <a className={styles.primaryButton} href="/gurukulam">
                 Explore our Gurukulam <Arrow />
               </a>
               <a className={styles.textLink} href="/donate">
-                Support our mission <Arrow diagonal />
+                Support Dharma <Arrow diagonal />
+              </a>
+              <a className={styles.textLink} href="/volunteer">
+                Join our mission <Arrow diagonal />
               </a>
             </div>
             <div className={styles.heroQuote}>

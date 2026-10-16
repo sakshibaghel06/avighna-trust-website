@@ -39,14 +39,24 @@ export default function SpiritualServicesPage() {
         <InfoGrid
           items={[
             {
-              title: "Temple services",
+              title: "Homams & Yagnas",
               description:
-                "Temple service is identified as an area of institutional work. The nature, location and availability of services are not yet confirmed.",
+                "Vedic fire rites and sacrificial observances are named as areas of spiritual activity; no specific rite or service is currently scheduled here.",
             },
             {
-              title: "Spiritual activities",
+              title: "Pujas & Samskaras",
               description:
-                "Spiritual activities are part of the stated scope. Specific forms of participation and schedules are to be confirmed.",
+                "Worship and life-cycle rites are included in the stated scope, subject to confirmation of the tradition, arrangements and availability.",
+            },
+            {
+              title: "Festivals",
+              description:
+                "Festivals can bring worship, learning and community together. No festival dates or programmes have been verified.",
+            },
+            {
+              title: "Temple activities",
+              description:
+                "Temple-related activities are identified as part of the vision. Their location, form and public access require confirmation.",
             },
           ]}
         />

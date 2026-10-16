@@ -30,6 +30,16 @@ const pageArtwork: Record<string, { symbol: string; title: string; note: string 
     title: "The learning relationship",
     note: "Illustrative motif · not a campus photograph",
   },
+  "/panchamukhi-shikshana": {
+    symbol: "पंच",
+    title: "A many-sided learning",
+    note: "Illustrative motif · educational framework to be confirmed",
+  },
+  "/samskritam": {
+    symbol: "संस्कृत",
+    title: "Language of heritage",
+    note: "Illustrative motif · language learning pathways to be confirmed",
+  },
   "/programmes": {
     symbol: "विद्या",
     title: "Study with care",
@@ -44,6 +54,16 @@ const pageArtwork: Record<string, { symbol: string; title: string; note: string 
     symbol: "दीप",
     title: "Tradition expressed through service",
     note: "Illustrative motif · service details to be confirmed",
+  },
+  "/darshanam": {
+    symbol: "दर्शन",
+    title: "Sacred seeing",
+    note: "Illustrative motif · temple architecture and practice to be confirmed",
+  },
+  "/vanaprastham": {
+    symbol: "व",
+    title: "A life of reflection",
+    note: "Illustrative motif · community programme details to be confirmed",
   },
   "/community": {
     symbol: "सेवा",
@@ -65,10 +85,35 @@ const pageArtwork: Record<string, { symbol: string; title: string; note: string 
     title: "A conversation begins here",
     note: "Illustrative motif · contact details to be confirmed",
   },
+  "/volunteer": {
+    symbol: "सेवा",
+    title: "Contribute with care",
+    note: "Illustrative motif · volunteer arrangements to be confirmed",
+  },
   "/donate": {
     symbol: "दान",
     title: "Support learning with care",
     note: "Illustrative motif · no payments are accepted here",
+  },
+  "/privacy-policy": {
+    symbol: "गोपनीयता",
+    title: "Trusted stewardship",
+    note: "Illustrative motif · data practices are still to be confirmed",
+  },
+  "/terms-and-conditions": {
+    symbol: "नियम",
+    title: "A clear framework",
+    note: "Illustrative motif · policies are subject to review",
+  },
+  "/donation-refund-policy": {
+    symbol: "परिशुद्धि",
+    title: "Careful stewardship",
+    note: "Illustrative motif · refund arrangements to be confirmed",
+  },
+  "/thank-you": {
+    symbol: "शुभ",
+    title: "Gratitude and goodwill",
+    note: "Illustrative motif · acknowledgement page",
   },
 };
 
@@ -81,17 +126,33 @@ const relatedPages: Record<string, { href: string; label: string }[]> = {
     { href: "/programmes", label: "Areas of learning" },
     { href: "/about", label: "Our purpose" },
   ],
+  "/panchamukhi-shikshana": [
+    { href: "/programmes", label: "Learning programmes" },
+    { href: "/samskritam", label: "Samskritam" },
+  ],
+  "/samskritam": [
+    { href: "/panchamukhi-shikshana", label: "Panchamukhi Shikshana" },
+    { href: "/research", label: "Research & publications" },
+  ],
   "/programmes": [
     { href: "/gurukulam", label: "The Gurukulam" },
     { href: "/research", label: "Research & publications" },
   ],
   "/research": [
     { href: "/programmes", label: "Learning programmes" },
-    { href: "/gallery", label: "Gallery placeholders" },
+    { href: "/gallery", label: "Gallery" },
   ],
   "/spiritual-services": [
+    { href: "/darshanam", label: "Darśanam" },
     { href: "/community", label: "Community welfare" },
+  ],
+  "/darshanam": [
+    { href: "/spiritual-services", label: "Spiritual services" },
     { href: "/events", label: "Events & activities" },
+  ],
+  "/vanaprastham": [
+    { href: "/community", label: "Community welfare" },
+    { href: "/about", label: "About the institution" },
   ],
   "/community": [
     { href: "/spiritual-services", label: "Spiritual services" },
@@ -109,9 +170,29 @@ const relatedPages: Record<string, { href: string; label: string }[]> = {
     { href: "/about", label: "About the institution" },
     { href: "/programmes", label: "Learning programmes" },
   ],
+  "/volunteer": [
+    { href: "/contact", label: "Contact information" },
+    { href: "/donate", label: "Support the mission" },
+  ],
   "/donate": [
     { href: "/programmes", label: "Learning programmes" },
     { href: "/contact", label: "Contact information" },
+  ],
+  "/privacy-policy": [
+    { href: "/terms-and-conditions", label: "Terms & conditions" },
+    { href: "/donation-refund-policy", label: "Donation & refund policy" },
+  ],
+  "/terms-and-conditions": [
+    { href: "/privacy-policy", label: "Privacy policy" },
+    { href: "/donation-refund-policy", label: "Donation & refund policy" },
+  ],
+  "/donation-refund-policy": [
+    { href: "/privacy-policy", label: "Privacy policy" },
+    { href: "/donate", label: "Support the mission" },
+  ],
+  "/thank-you": [
+    { href: "/", label: "Return home" },
+    { href: "/contact", label: "Contact the trust" },
   ],
 };
 

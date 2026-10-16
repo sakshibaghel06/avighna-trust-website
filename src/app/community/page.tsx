@@ -36,29 +36,44 @@ export default function CommunityPage() {
         </p>
       </PageSection>
 
-      <PageSection eyebrow="How service connects" title={<>Learning with responsibility.</>}>
+      <PageSection eyebrow="Learning and outreach" title={<>Programmes named in the project brief.</>}>
         <InfoGrid
           items={[
             {
-              title: "Education & access",
+              title: "Deva Śruti Veda classes",
               description:
-                "Support for learning is one way the purpose of knowledge can be shared more widely.",
+                "Veda classes are identified as a community learning area under the name Deva Śruti.",
+              note: "Class availability and schedule are not confirmed.",
             },
             {
-              title: "Community outreach",
+              title: "DevaVāṇī Sanskrit classes",
               description:
-                "Outreach is an identified area of work; the form and scope of activities require confirmation.",
+                "Sanskrit classes are identified as an outreach area under the name DevaVāṇī.",
+              note: "Class availability and schedule are not confirmed.",
             },
             {
-              title: "Cultural continuity",
+              title: "Cultural festivals & workshops",
               description:
-                "Preserving language, learning and heritage can strengthen connections across generations.",
+                "Cultural gatherings and workshops can create opportunities for shared learning and participation.",
+              note: "No current dates or registration details have been supplied.",
             },
             {
-              title: "Participation",
+              title: "Youth programmes & teacher training",
               description:
-                "Ways to volunteer or contribute should be announced when the institution has confirmed opportunities.",
-              note: "No current volunteer programme has been verified.",
+                "Youth learning and teacher development are named as areas of community engagement.",
+              note: "No current programme details have been verified.",
+            },
+            {
+              title: "Rural outreach",
+              description:
+                "Rural outreach is included in the stated scope of community work.",
+              note: "No location, partner or active initiative has been confirmed.",
+            },
+            {
+              title: "Community service",
+              description:
+                "Seva connects learning with responsibility and care for the wider community.",
+              note: "Specific beneficiaries and activities require confirmation.",
             },
           ]}
         />

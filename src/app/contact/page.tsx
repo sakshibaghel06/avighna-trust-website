@@ -5,6 +5,7 @@ import {
   NotePanel,
   PageSection,
 } from "../_components/content-page";
+import { SubmissionForm } from "../_components/submission-form";
 
 export const metadata: Metadata = {
   title: "Contact | Vedavani Pathashala",
@@ -23,8 +24,8 @@ export default function ContactPage() {
       <PageSection eyebrow="Enquiries & visits" title={<>Details to be confirmed.</>}>
         <p>
           Official phone, email and postal contact details have not been
-          provided. We have not added an enquiry form because there is no
-          verified submission service connected to this website.
+          provided. You can submit an enquiry using the form below; responses
+          and email notifications are not yet configured.
         </p>
         <InfoGrid
           items={[
@@ -46,10 +47,16 @@ export default function ContactPage() {
             {
               title: "Enquiry options",
               description:
-                "An official enquiry route will be added once contact details and handling arrangements are confirmed.",
+                "Use the enquiry form below. A response time or email receipt is not guaranteed.",
             },
           ]}
         />
+        <h3 style={{ marginTop: "2rem", marginBottom: "1rem" }}>Send an enquiry</h3>
+        <SubmissionForm type="contact" />
+        <p style={{ marginTop: "1rem" }}>
+          Submission availability depends on configured Supabase and abuse
+          protection services. Do not include sensitive personal information.
+        </p>
         <NotePanel title="Before planning a visit">
           <p>
             Please wait for confirmed location, directions and visiting
@@ -57,6 +64,14 @@ export default function ContactPage() {
             inferred from this page.
           </p>
         </NotePanel>
+      </PageSection>
+      <PageSection eyebrow="Programme interest" title={<>Ask about admissions.</>}>
+        <p>
+          This form records an enquiry only when submission services are
+          configured. It does not confirm admission, course availability,
+          eligibility, fees or a response time.
+        </p>
+        <SubmissionForm type="admission" />
       </PageSection>
     </ContentPage>
   );

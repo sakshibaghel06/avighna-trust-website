@@ -7,6 +7,7 @@ import {
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
+import { SubmissionForm } from "../_components/submission-form";
 
 export const metadata: Metadata = {
   title: "Programmes | Vedavani Pathashala",
@@ -36,6 +37,18 @@ export default function ProgrammesPage() {
               description:
                 "Language and literature as a way into the texts, ideas and expressive heritage of the Sanskrit tradition.",
               note: "Course levels and admission details have not been supplied.",
+            },
+            {
+              title: "NIOS & modern academic learning",
+              description:
+                "The project brief identifies NIOS education and contemporary academic learning as areas to explore alongside traditional study.",
+              note: "Affiliation, subjects, eligibility and availability are not confirmed.",
+            },
+            {
+              title: "Languages",
+              description:
+                "Language learning can support communication, access to texts and participation across educational contexts.",
+              note: "No specific language courses or schedules have been supplied.",
             },
             {
               title: "Panchamukhi Shikshana",
@@ -81,6 +94,19 @@ export default function ProgrammesPage() {
             eligibility, fees and enrolment information require confirmation.
           </p>
         </NotePanel>
+      </PageSection>
+
+      <PageSection eyebrow="Admissions enquiry" title={<>Ask about learning options.</>}>
+        <p>
+          Use this form to express interest in a programme. Course availability,
+          eligibility, schedules and fees are not confirmed by submitting an
+          enquiry.
+        </p>
+        <SubmissionForm type="admission" />
+        <p style={{ marginTop: "1rem" }}>
+          Submission availability depends on configured Supabase and abuse
+          protection services. No email receipt or notification is sent.
+        </p>
       </PageSection>
     </ContentPage>
   );

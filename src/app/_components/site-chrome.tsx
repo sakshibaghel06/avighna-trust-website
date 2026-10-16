@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SubmissionForm } from "./submission-form";
 import styles from "../page.module.css";
 
 const brand = {
@@ -15,27 +16,32 @@ const navigationGroups = [
     links: [
       { href: "/about", label: "About" },
       { href: "/gurukulam", label: "Gurukulam" },
+      { href: "/panchamukhi-shikshana", label: "Panchamukhi Shikshana" },
     ],
   },
   {
     label: "Learning",
     links: [
       { href: "/programmes", label: "Programmes" },
+      { href: "/samskritam", label: "Samskritam" },
       { href: "/research", label: "Research" },
     ],
   },
   {
-    label: "Activities",
+    label: "Tradition",
     links: [
       { href: "/spiritual-services", label: "Spiritual services" },
+      { href: "/darshanam", label: "Darśanam" },
+      { href: "/vanaprastham", label: "Vanaprastham" },
       { href: "/community", label: "Community" },
     ],
   },
   {
-    label: "Discover",
+    label: "Engage",
     links: [
       { href: "/events", label: "Events" },
       { href: "/gallery", label: "Gallery" },
+      { href: "/volunteer", label: "Volunteer" },
       { href: "/contact", label: "Contact" },
     ],
   },
@@ -53,11 +59,12 @@ function BrandLogo() {
   return (
     <span className={styles.headerLogoFrame}>
       <Image
-        alt="Avighna Trust official logo"
+        alt="Avighna Foundation logo"
         className={styles.headerLogo}
-        height={1254}
-        src="/images/avighna-trust-logo.jpeg"
-        width={1254}
+        height={443}
+        loading="eager"
+        src="/images/WhatsApp%20Image%202026-10-16%20at%2010.29.45%20AM.jpeg"
+        width={753}
       />
     </span>
   );
@@ -68,11 +75,11 @@ function FooterBrand() {
     <>
       <span className={styles.footerLogoFrame}>
         <Image
-          alt="Avighna Trust official logo"
+          alt="Avighna Foundation logo"
           className={styles.footerLogo}
-          height={1254}
-          src="/images/avighna-trust-logo.jpeg"
-          width={1254}
+          height={443}
+          src="/images/WhatsApp%20Image%202026-10-16%20at%2010.29.45%20AM.jpeg"
+          width={753}
         />
       </span>
       <span className={styles.brandText}>
@@ -99,7 +106,7 @@ export function SiteHeader({ activePath }: { activePath: string }) {
         </Link>
       </div>
       <header className={styles.header}>
-        <Link className={styles.brand} href="/" aria-label="Avighna Trust official logo home">
+        <Link className={styles.brand} href="/" aria-label="Avighna Trust and Vedavani Pathashala home">
           <BrandLogo />
         </Link>
         <nav className={styles.nav} aria-label="Main navigation">
@@ -172,6 +179,11 @@ export function SiteFooter() {
             Nurturing values. Inspiring future generations.
           </p>
           <span className={styles.footerProvisional}>{brand.relationshipNote}</span>
+          <div className={styles.footerNewsletter}>
+            <h2>Newsletter</h2>
+            <p>Register your interest in future updates.</p>
+            <SubmissionForm type="newsletter" />
+          </div>
         </div>
         <div className={styles.footerLinks}>
           <h2>Explore</h2>
@@ -190,8 +202,15 @@ export function SiteFooter() {
         <div className={styles.footerContact}>
           <h2>Take part</h2>
           <Link href="/donate">Support the mission</Link>
+          <Link href="/volunteer">Volunteer registration</Link>
           <Link href="/contact">Contact & enquiries</Link>
           <p>Official contact details to be confirmed.</p>
+        </div>
+        <div className={styles.footerLinks}>
+          <h2>Policies</h2>
+          <Link href="/privacy-policy">Privacy policy</Link>
+          <Link href="/terms-and-conditions">Terms & conditions</Link>
+          <Link href="/donation-refund-policy">Donation & refund policy</Link>
         </div>
       </div>
       <div className={styles.footerBottom}>

@@ -62,11 +62,35 @@ export default function GurukulamPage() {
             },
           ]}
         />
-        <NotePanel title="About the daily routine">
+      </PageSection>
+
+      <PageSection eyebrow="A daily rhythm" title={<>Study, practice and reflection.</>}>
+        <InfoGrid
+          items={[
+            {
+              title: "Begin with attention",
+              description: "A day in a Gurukulam may make space for quiet preparation, reflection and readiness to learn.",
+            },
+            {
+              title: "Learn with guidance",
+              description: "Teaching, listening, recitation and questions form a connected learning practice.",
+            },
+            {
+              title: "Practise and participate",
+              description: "Steady practice and shared responsibilities can connect study with everyday conduct.",
+            },
+            {
+              title: "Reflect and rest",
+              description: "Time for reflection, community and rest supports a balanced approach to learning.",
+            },
+          ]}
+        />
+        <NotePanel title="Illustrative learning rhythm, not a confirmed timetable">
           <p>
-            No verified timetable, residential arrangement or daily schedule
-            has been supplied. Specific Gurukulam arrangements should be
-            confirmed with the institution.
+            These are broad learning themes, not a description of an operating
+            daily schedule. Timings, residential arrangements, student life and
+            specific practices have not been supplied and must be confirmed
+            with the institution.
           </p>
         </NotePanel>
       </PageSection>

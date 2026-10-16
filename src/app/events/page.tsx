@@ -7,6 +7,8 @@ import {
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
+import { EventsCalendar } from "../_components/events-calendar";
+import { SubmissionForm } from "../_components/submission-form";
 
 export const metadata: Metadata = {
   title: "Events & Activities | Vedavani Pathashala",
@@ -60,6 +62,7 @@ export default function EventsPage() {
       </PageSection>
 
       <PageSection eyebrow="Event information" title={<>Verified details will be shared here.</>}>
+        <EventsCalendar />
         <TextColumns>
           <TextBlock title="No calendar yet">
             <p>
@@ -82,6 +85,14 @@ export default function EventsPage() {
             scheduled or open for registration.
           </p>
         </NotePanel>
+      </PageSection>
+      <PageSection eyebrow="Future activities" title={<>Express interest without registering.</>}>
+        <p>
+          There are no confirmed events or open registrations at this time.
+          You may send a general enquiry about future activities; this does not
+          reserve a place or register you for an event.
+        </p>
+        <SubmissionForm type="contact" />
       </PageSection>
     </ContentPage>
   );

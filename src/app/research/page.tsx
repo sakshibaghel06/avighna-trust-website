@@ -32,25 +32,37 @@ export default function ResearchPage() {
         <InfoGrid
           items={[
             {
-              title: "Research",
+              title: "Research Centre",
               description:
-                "Study and inquiry relating to Vedic learning and Bharatiya knowledge traditions.",
+                "A research centre is identified in the project brief as part of the vision for study of Vedic and Bharatiya knowledge systems.",
+              note: "No operational centre or current project has been verified.",
             },
             {
-              title: "Publications",
+              title: "Manuscripts & texts",
               description:
-                "Educational writing and learning resources that share knowledge with care.",
+                "Manuscripts and source texts are important to preservation and study; no collection or holdings are represented here.",
+            },
+            {
+              title: "Physical library",
+              description:
+                "A library is included in the stated research and learning vision. No location, catalogue or operating hours have been supplied.",
             },
             {
               title: "Digital archives",
               description:
-                "A possible digital home for texts, recordings or learning resources, subject to the institution's plans and permissions.",
-              note: "No archive catalogue or digital collection has been supplied.",
+                "Digital preservation may support access to texts and learning resources, subject to permissions and the institution's plans.",
+              note: "No digital collection or archive catalogue has been supplied.",
+            },
+            {
+              title: "Publications",
+              description:
+                "Educational publications can share research and learning with care.",
+              note: "No publication is currently available for download.",
             },
             {
               title: "Conferences & seminars",
               description:
-                "Potential forums for discussion and exchange around learning and research.",
+                "Scholarly gatherings can support dialogue and exchange around Vedic and Bharatiya knowledge.",
               note: "No conference or seminar dates have been confirmed.",
             },
           ]}

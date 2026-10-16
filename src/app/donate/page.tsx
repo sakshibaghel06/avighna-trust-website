@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import {
   ContentPage,
-  InfoGrid,
   NotePanel,
   PageSection,
 } from "../_components/content-page";
+import { DonationSelector } from "../_components/donation-selector";
 
 export const metadata: Metadata = {
   title: "Support the Mission | Vedavani Pathashala",
@@ -27,37 +27,19 @@ export default function DonatePage() {
           welfare as areas of institutional work. These are the purposes
           described here; current funding priorities have not been supplied.
         </p>
-        <InfoGrid
-          items={[
-            {
-              title: "Vedic & Sanskrit learning",
-              description:
-                "Support the preservation and teaching of Vedic knowledge, oral traditions and Sanskrit.",
-            },
-            {
-              title: "Education & resources",
-              description:
-                "Contribute towards educational opportunities and learning resources, as identified by the institution.",
-            },
-            {
-              title: "Research & publications",
-              description:
-                "Help sustain inquiry and the careful sharing of knowledge through publications.",
-            },
-            {
-              title: "Spiritual & community work",
-              description:
-                "Support temple services, spiritual activities and community welfare as needs are confirmed.",
-            },
-          ]}
-        />
+        <p>
+          The categories below are presented for interface planning only. They
+          do not represent confirmed funding priorities or active donation
+          arrangements.
+        </p>
+        <DonationSelector />
       </PageSection>
 
       <PageSection eyebrow="Before contributing" title={<>Verified information comes first.</>}>
         <p>
           No bank account, UPI ID, payment link or donation-processing
-          arrangement has been provided. This site does not currently accept
-          contributions or collect payment information.
+          arrangement has been verified. This site does not currently accept
+          contributions or collect donor or payment information.
         </p>
         <NotePanel title="No tax-benefit claim">
           <p>
