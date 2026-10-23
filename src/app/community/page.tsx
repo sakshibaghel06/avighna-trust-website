@@ -4,6 +4,7 @@ import {
   InfoGrid,
   NotePanel,
   PageSection,
+  PhotoFeature,
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
@@ -34,6 +35,11 @@ export default function CommunityPage() {
           not been supplied. We will describe activities here only after their
           details are verified.
         </p>
+        <PhotoFeature
+          alt="A group of adults and a child holding a cheque in front of an Avighna Foundation banner."
+          caption="A support handover pictured in a photograph supplied by the Foundation."
+          src="/images/ssss.jpeg"
+        />
       </PageSection>
 
       <PageSection eyebrow="Learning and outreach" title={<>Programmes named in the project brief.</>}>

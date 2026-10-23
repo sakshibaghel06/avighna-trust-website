@@ -4,6 +4,7 @@ import {
   InfoGrid,
   NotePanel,
   PageSection,
+  PhotoFeature,
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
@@ -58,6 +59,12 @@ export default function EventsPage() {
               note: "No current activity dates confirmed.",
             },
           ]}
+        />
+        <PhotoFeature
+          alt="Three adults and a child holding a cheque in front of a foundation banner."
+          caption="A community-support moment in a supplied photograph; no event date or schedule is implied."
+          portrait
+          src="/images/WhatsApp Image 2026-10-17 at 10.04.12 AM.jpeg"
         />
       </PageSection>
 

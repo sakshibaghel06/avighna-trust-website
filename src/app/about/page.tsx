@@ -4,6 +4,7 @@ import {
   InfoGrid,
   NotePanel,
   PageSection,
+  PhotoFeature,
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
@@ -34,6 +35,12 @@ export default function AboutPage() {
           knowledge through attentive study, oral traditions, values-based
           learning and meaningful engagement with the present.
         </p>
+        <PhotoFeature
+          alt="Three adults and a child holding a cheque in front of a foundation banner."
+          caption="A community-support moment shown in the supplied photograph."
+          portrait
+          src="/images/WhatsApp Image 2026-10-17 at 10.04.12 AM.jpeg"
+        />
         <NotePanel title="A provisional identity">
           <p>
             Official naming, organisational structure and the relationship

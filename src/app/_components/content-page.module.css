@@ -764,3 +764,45 @@
     transition: none;
   }
 }
+
+.photoFeature {
+  width: min(100%, 680px);
+  margin-top: 26px;
+}
+
+.photoFrame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(20, 38, 64, 0.16);
+  background: #e7e1d5;
+  box-shadow: 0 14px 32px rgba(20, 38, 64, 0.08);
+}
+
+.photoFeature[data-orientation="portrait"] .photoFrame {
+  width: min(100%, 390px);
+  aspect-ratio: 3 / 4;
+}
+
+.photoImage {
+  object-fit: cover;
+  transition: transform 320ms ease;
+}
+
+.photoFeature:hover .photoImage {
+  transform: scale(1.02);
+}
+
+.photoFeature figcaption {
+  margin-top: 9px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photoImage {
+    transition: none;
+  }
+}

@@ -393,3 +393,105 @@
     transition: none;
   }
 }
+
+.galleryArt {
+  position: relative;
+  min-height: 155px;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid rgba(20, 38, 64, 0.12);
+  background:
+    radial-gradient(circle, rgba(217, 154, 61, 0.16), transparent 55%),
+    #e8e3d7;
+}
+
+.galleryImage {
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.galleryCard:hover .galleryImage {
+  transform: scale(1.035);
+}
+
+.galleryCard small {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mediaFallback {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  min-height: 155px;
+  place-items: center;
+  padding: 14px;
+  color: var(--ink-soft);
+  font-size: 12px;
+  text-align: center;
+}
+
+.dialogArt {
+  min-height: 0;
+  padding: 8px;
+  background: #e8e3d7;
+}
+
+.dialogImage {
+  display: block;
+  width: 100%;
+  height: min(58vh, 540px);
+  object-fit: contain;
+}
+
+.videoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.videoCard {
+  min-width: 0;
+  padding: clamp(16px, 2.5vw, 24px);
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.8), transparent 70%),
+    #eee9dd;
+  box-shadow: 0 12px 28px rgba(20, 38, 64, 0.06);
+}
+
+.videoCard h3 {
+  margin-bottom: 14px;
+  color: var(--forest);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(19px, 2.2vw, 25px);
+  font-weight: 400;
+}
+
+.speechVideo {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+  aspect-ratio: 9 / 16;
+  background: #101820;
+  object-fit: contain;
+}
+
+.videoCard > p {
+  margin-top: 11px;
+  color: var(--ink-soft);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .videoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .galleryImage {
+    transition: none;
+  }
+}

@@ -4,12 +4,12 @@ import {
   NotePanel,
   PageSection,
 } from "../_components/content-page";
-import { GalleryExplorer } from "../_components/gallery-explorer";
+import { GalleryExplorer, SpeechVideos } from "../_components/gallery-explorer";
 
 export const metadata: Metadata = {
   title: "Gallery | Vedavani Pathashala",
   description:
-    "A gallery structure prepared for approved institutional photographs; current visuals are clearly marked placeholders.",
+    "Photographs and speech videos supplied for Avighna Foundation and Vedavani Pathashala.",
 };
 
 export default function GalleryPage() {
@@ -17,23 +17,29 @@ export default function GalleryPage() {
     <ContentPage
       activePath="/gallery"
       eyebrow="Gallery"
-      title={<>Tradition, <em>in the making.</em></>}
-      description="A place for the people, practice and moments of this learning community—once approved institutional photographs are available."
+      title={<>Moments of learning <em>and service.</em></>}
+      description="Photographs and recorded speeches supplied for Avighna Foundation, presented without invented dates or event details."
     >
-      <PageSection eyebrow="A visual record" title={<>Our gallery is waiting for its stories.</>}>
+      <PageSection eyebrow="A visual record" title={<>A glimpse of the community.</>}>
         <p>
-          No official campus, student or activity photographs were present in
-          the project assets. The panels below are intentionally abstract
-          placeholders, not images of the institution or its community.
+          The photographs show community-support moments, educational support
+          and the Foundation identity. They do not document Gurukulam classes
+          or confirm a dated event.
         </p>
         <GalleryExplorer />
         <NotePanel title="Photography and permissions">
           <p>
-            Approved photographs can replace these placeholders when supplied.
-            Images featuring students or community members should be shared
-            only with appropriate permission and context.
+            Images are shown as supplied and are not accompanied by dates or
+            claims about programmes, beneficiaries or outcomes.
           </p>
         </NotePanel>
+      </PageSection>
+      <PageSection eyebrow="Recorded speeches" title={<>Words worth listening to.</>}>
+        <p>
+          Local speech recordings are available below. Playback is started by
+          the viewer; no video plays automatically.
+        </p>
+        <SpeechVideos />
       </PageSection>
     </ContentPage>
   );

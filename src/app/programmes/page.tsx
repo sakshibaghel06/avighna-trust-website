@@ -4,6 +4,7 @@ import {
   InfoGrid,
   NotePanel,
   PageSection,
+  PhotoFeature,
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
@@ -63,6 +64,12 @@ export default function ProgrammesPage() {
               note: "Programme availability and delivery are to be confirmed.",
             },
           ]}
+        />
+        <PhotoFeature
+          alt="A young woman and two adults with a laptop in front of an Avighna Foundation banner."
+          caption="The banner identifies a laptop sponsorship for educational empowerment."
+          portrait
+          src="/images/ssssss.jpeg"
         />
       </PageSection>
 

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SiteFooter, SiteHeader } from "./site-chrome";
 import styles from "./content-page.module.css";
 
@@ -340,6 +341,37 @@ export function TextBlock({
       <h3>{title}</h3>
       {children}
     </article>
+  );
+}
+
+export function PhotoFeature({
+  src,
+  alt,
+  caption,
+  portrait = false,
+}: {
+  src: string;
+  alt: string;
+  caption: string;
+  portrait?: boolean;
+}) {
+  return (
+    <figure
+      className={styles.photoFeature}
+      data-orientation={portrait ? "portrait" : "landscape"}
+    >
+      <div className={styles.photoFrame}>
+        <Image
+          alt={alt}
+          className={styles.photoImage}
+          fill
+          loading="lazy"
+          sizes="(max-width: 700px) 100vw, 680px"
+          src={src}
+        />
+      </div>
+      <figcaption>{caption}</figcaption>
+    </figure>
   );
 }
 

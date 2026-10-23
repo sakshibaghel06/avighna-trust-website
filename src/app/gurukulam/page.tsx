@@ -4,6 +4,7 @@ import {
   InfoGrid,
   NotePanel,
   PageSection,
+  PhotoFeature,
   TextBlock,
   TextColumns,
 } from "../_components/content-page";
@@ -35,6 +36,12 @@ export default function GurukulamPage() {
           respect, and keeps knowledge connected to how it is practised and
           passed on.
         </p>
+        <PhotoFeature
+          alt="A young woman holding a laptop with two adults beside her in front of an Avighna Foundation banner."
+          caption="The supplied photograph shows a laptop sponsorship identified on the banner; it is not a photograph of Gurukulam classes."
+          portrait
+          src="/images/ssssss.jpeg"
+        />
       </PageSection>
 
       <PageSection eyebrow="A considered approach" title={<>Learning in many dimensions.</>}>

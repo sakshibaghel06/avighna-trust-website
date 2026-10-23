@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 import styles from "./page.module.css";
 import { SiteFooter, SiteHeader } from "./_components/site-chrome";
 
@@ -94,6 +95,24 @@ const workAreas = [
   },
 ];
 
+const homePhotos = [
+  {
+    title: "Education support",
+    src: "/images/ssssss.jpeg",
+    alt: "A young woman and two adults with a laptop in front of an Avighna Foundation banner.",
+  },
+  {
+    title: "Community support",
+    src: "/images/WhatsApp Image 2026-10-17 at 10.04.12 AM.jpeg",
+    alt: "Three adults and a child holding a cheque in front of a foundation banner.",
+  },
+  {
+    title: "Avighna Foundation",
+    src: "/images/WhatsApp Image 2026-10-16 at 10.29.45 AM.jpeg",
+    alt: "The blue Avighna Foundation logo.",
+  },
+];
+
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
     <span aria-hidden="true" className={styles.arrow}>
@@ -113,19 +132,19 @@ function SectionLabel({ children }: { children: ReactNode }) {
 
 function HeroArtwork() {
   return (
-    <div
-      className={styles.heroArtwork}
-      role="img"
-      aria-label="Illustrative artwork placeholder for a future Gurukulam campus photograph"
-    >
-      <div className={styles.photoPlaceholder}>
-        <span className={styles.photoKicker}>A place for learning</span>
-        <span className={styles.photoMonogram} aria-hidden="true">॥</span>
-        <span className={styles.photoTitle}>The Gurukulam,<br />in its own light.</span>
-        <span className={styles.photoCaption}>Illustrative placeholder · campus photograph to follow</span>
-      </div>
-      <span className={styles.artIndex}>Illustrative artwork · 01</span>
-    </div>
+    <figure className={styles.heroArtwork}>
+      <Image
+        alt="A community-support handover with Avighna Foundation representatives."
+        className={styles.heroPhoto}
+        fill
+        priority
+        sizes="(max-width: 900px) 90vw, 48vw"
+        src="/images/ssss.jpeg"
+      />
+      <figcaption className={styles.heroPhotoCaption}>
+        A community-support moment
+      </figcaption>
+    </figure>
   );
 }
 
@@ -364,30 +383,29 @@ export default function Home() {
               <h2 id="gallery-title">Tradition, <em>in the making.</em></h2>
             </div>
             <p>
-              Official photographs will be shared here when available.
-              We look forward to showing you the people and moments that make
-              this learning community.
+              A small selection of the photographs and identity artwork
+              supplied by Avighna Foundation.
             </p>
           </div>
           <div className={styles.galleryPlaceholders}>
-            <div className={`${styles.galleryPlaceholder} ${styles.galleryOne}`} role="img" aria-label="Illustrative placeholder for Vedic learning; not an institutional photograph">
-              <span className={styles.placeholderIcon} aria-hidden="true">✳</span>
-              <span>Vedic learning</span>
-              <span className={styles.placeholderCaption}>Illustrative placeholder</span>
-            </div>
-            <div className={`${styles.galleryPlaceholder} ${styles.galleryTwo}`} role="img" aria-label="Illustrative placeholder for Sanskrit learning; not an institutional photograph">
-              <span className={styles.placeholderIcon} aria-hidden="true">॥</span>
-              <span>Words in practice</span>
-              <span className={styles.placeholderCaption}>Illustrative placeholder</span>
-            </div>
-            <div className={`${styles.galleryPlaceholder} ${styles.galleryThree}`} role="img" aria-label="Illustrative placeholder for community gathering; not an institutional photograph">
-              <span className={styles.placeholderIcon} aria-hidden="true">◉</span>
-              <span>Gathered in community</span>
-              <span className={styles.placeholderCaption}>Illustrative placeholder</span>
-            </div>
+            {homePhotos.map((photo) => (
+              <figure className={styles.galleryPlaceholder} key={photo.src}>
+                <Image
+                  alt={photo.alt}
+                  className={styles.galleryPhoto}
+                  fill
+                  loading="lazy"
+                  sizes="(max-width: 600px) 90vw, (max-width: 900px) 30vw, 24vw"
+                  src={photo.src}
+                />
+                <figcaption className={styles.galleryPhotoCaption}>
+                  {photo.title}
+                </figcaption>
+              </figure>
+            ))}
           </div>
           <p className={styles.galleryDisclaimer}>
-            Illustrative placeholders only · No institutional photographs supplied yet
+            Images are presented as supplied; no dates or additional claims are attached.
           </p>
           <a className={styles.galleryLink} href="/gallery">
             Visit the gallery <Arrow />
